@@ -1,0 +1,80 @@
+<script type="text/template" id="customers_template">
+	<a href="#admin" title="back"><img src="resources/img/back.jpg" alt="Volver" /></a>
+	<form>
+		<label for="lastName">Buscar por Apellido</label>				
+		<input type="text" id="customerName" name="lastName" required/>
+		<input type="submit" id="search" value="Buscar" />															
+	</form>
+	<span class="title">Administraci&oacute;n de Clientes <a title="Nuevo" id="newCustomer"><img src="resources/img/add.jpg" alt="Nuevo" /></span>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Empresa</th>
+				<th>Direcci&oacute;n</th>
+				<th>Tel&eacute;fono</th>
+				<th class="optPlus">Opciones</th>
+				<th class="usr"> </th>
+			</tr>
+		</thead>
+		<tbody id="customers">
+		</tbody>
+	</table>
+</script>
+
+<script type="text/template" id="customers_results">
+	 {{#each items}}
+	<tr>
+		<td>{{name}}</td>
+		<td>{{lastName}}</td>
+		<td>{{businessName}}</td>
+		<td>{{address}}</td>
+		<td>{{phone}}</td>
+		<td class="optPlus">		
+			<a href="" title="Trabajos"><img src="resources/img/process.jpg" alt="Trabajos" /></a>
+			<a title="Editar"><img src="resources/img/edit.jpg" width="24" alt="Editar" id="edit_button"/></a>
+			<a title="Eliminar" class="deleteCustomer"><img src="resources/img/delete.jpg" alt="Eliminar" /></a>
+		</td>
+		<td class="usr">
+			<img src="resources/img/info.jpg" />
+		</td>
+	</tr>
+	{{/each}}
+</script>
+
+<script type="text/template" id="customer_newForm">
+	<h1>Guardar Cliente</h1>
+	<form>
+		<fieldset>
+			<input type="hidden" id="id" value="" />
+			<label for="cuit">Cuit</label>
+			<input type="text" id="cuit" value="" /> 
+			<label for="numIncome">N&#176; de Ingresos Brutos</label>
+			<input type="text" id="numIncome" value="" /> 
+			<label for="initDate">Inicio de Actividades</label>
+			<input type="text" id="initDate" value="" /> 
+			<label for="name">Nombre</label>
+			<input type="text" id="name" value="" required/>
+			<label for="lastName">Apellido</label>
+			<input type="text" id="lastName" value="" />
+			<label for="businessName">Razon Social</label>
+			<input type="text" id="businessName" value="" /> 
+			<label for="address">Direccion</label>
+			<input type="text" id="address" value="" />
+			<label for="city">Ciudad</label>
+			<select id="city">
+				<option value="vgg">Villa G. Galvez</option>
+				<option value="rosario">Rosario</option>
+			</select>
+			<label for="email">E-mail</label>
+			<input type="text" id="email" value="" />
+			<label for="phone">Telefono</label>
+			<input type="text" id="phone" value="" />							
+			<label for="cellPhone">Celular</label>
+			<input type="text" id="cellPhone" value="" />
+			<input type="submit" id="saveCustomer" value="Guardar" />							
+		</fieldset>
+	</form>
+</script>
+

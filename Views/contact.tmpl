@@ -1,0 +1,28 @@
+<script type="text/template" id="contact_template">
+	<div id="administration">
+		<a href="#index" title="back" id="back_inicio">
+			<img src="resources/img/back.png" alt="Volver" />
+		</a>
+		<a href="#login" title="Iniciar Sesi&oacute;n" class="loginButton"><img src="resources/img/user.png" alt="Iniciar Sesi&oacute;n" /></a>
+	</div>
+	<div id="contact">
+		<div id="contact_right">
+			<h2>FORMULARIO CONTACTO</h2>
+			<div id="line"></div>
+			<form action="contact.php" method="post" id="contactForm">
+				<fieldset>
+					<label for="name" class="black">Nombre</label>
+					<input type="text" name="name" id="name" class="shadow" required/>
+					<label for="email" class="black">E-mail</label>
+					<input type="email" name="email" id="email" class="shadow" required/>
+					<label for="telephone" class="black">Tel&eacute;fono</label>
+					<input type="text" name="telephone" id="telephone" class="shadow" />
+					<label for="question" class="black">Consulta</label>
+					<textarea name="question" id="question" class="shadow" required></textarea>
+					<input type="submit" value="Enviar" />
+				</fieldset>						
+			</form>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</script>
