@@ -12,7 +12,9 @@ a {
 	text-decoration: none;
 	font-family: Arial, Helvetica, sans-serif }
  
-	a:hover { text-decoration: none; }
+	a:hover { 
+		text-decoration: none; 
+		cursor:pointer; }
  
 .clearfix, .clearfix:after {
 	float: none;
@@ -25,7 +27,9 @@ a {
 	visibility: hidden; }
  
 .bold { font-weight: 900; }
- 
+
+.hidden {}
+
 .shadow {
 	box-shadow: 1px 1px 16px #FFF;
 	border-style: solid;

@@ -9,6 +9,7 @@
 	<table>
 		<thead>
 			<tr>
+				<th class="hidden">Id</th>
 				<th>Nombre</th>
 				<th>Apellido</th>
 				<th>Empresa</th>
@@ -26,7 +27,8 @@
 <script type="text/template" id="customers_results">
 	 {{#each items}}
 	<tr>
-		<td>{{name}}</td>
+		<td class="hidden">{{id}}</td>
+		<td >{{name}}</td>
 		<td>{{lastName}}</td>
 		<td>{{businessName}}</td>
 		<td>{{address}}</td>
@@ -44,6 +46,7 @@
 </script>
 
 <script type="text/template" id="customer_newForm">
+	<a class="toBack" title="back"><img src="resources/img/back.jpg" alt="Volver" /></a>
 	<h1>Guardar Cliente</h1>
 	<form>
 		<fieldset>
